@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.you-are-here {
+  animation: blink 2s infinite;
+  color: red;
+}
+
+.dir-button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1px 1px;
+  grid-template-areas: ". up ." "left . right" ". down .";
+}
+
+.up-button {
+  grid-area: up;
+}
+
+.down-button {
+  grid-area: down;
+}
+
+.left-button {
+  grid-area: left;
+}
+
+.right-button {
+  grid-area: right;
+}
+
+.square {
+  height: "3rem";
+  width: "10%";
+}
